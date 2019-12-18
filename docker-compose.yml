@@ -16,12 +16,8 @@ services:
       - REDIS_PREFIX=currency-exchange-development-
     ports:
       - "3000:3000"
-    volumes:
-      - ./server:/usr/src/app
-      - ./server/node_modules:/usr/src/app/node_modules
     networks:
       - app-network
-    command: npm run start
     depends_on:
       - redis
 
